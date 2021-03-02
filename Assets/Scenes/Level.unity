@@ -235,6 +235,12 @@ MonoBehaviour:
   scoree: {fileID: 1897681016}
   LawyerInstance: {fileID: 5821384540048506076, guid: 1558206bf5c779d408f26b2db793fd52,
     type: 3}
+  scoreRed: 0
+  scoreMagenta: 0
+  scoreManRight: 0
+  scoreManLeft: 0
+  scoreLawyer: 0
+  playerMouvment: 2.4
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +699,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100a86de98587a4478fc7d14490940da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  repeatTime: 0.17
+  repeatRate: 0.37
+  delTimePoopPrefab: 1
+  randDirMin: 0.2
+  randDirMax: 1.58
+  randomColorMin: 1
+  randomColorMax: 5
+  ranSpeedDirMin: 4
+  ranSpeedDirMax: 11
   Poop: {fileID: 6346623862917525152, guid: dfe7e3aeede56b1458b5f37d416af751, type: 3}
 --- !u!1 &1811763054
 GameObject:

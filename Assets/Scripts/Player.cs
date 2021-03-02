@@ -11,7 +11,11 @@ public class Player : MonoBehaviour
     public GameObject LawyerInstance;
    
     Text rezultatUI;
-    
+   
+    [SerializeField]
+    private int scoreRed, scoreMagenta, scoreManRight, scoreManLeft,scoreLawyer;
+    [SerializeField]
+    private float playerMouvment;
     int score;
     #endregion
     #region Methods
@@ -28,32 +32,32 @@ public class Player : MonoBehaviour
     {    
         if (collision.gameObject.GetComponent<Renderer>().material.color.Equals(Color.red))
         {
-            score += 500;
+            score += scoreRed;
         }
         else if (collision.gameObject.GetComponent<Renderer>().material.color.Equals(Color.magenta))
         {
-            score -= 250;
+            score -= scoreMagenta;
         }
         else if (collision.gameObject.name == "managerLeft")
         {
-            score -= 2000;
+            score -= scoreManLeft;
         }
         else if (collision.gameObject.name == "managerRight")
         {
-            score -= 2000;
+            score -= scoreManRight;
         }
         Destroy(collision.gameObject);
     }
     void PlayerMouvment() 
     { 
-        transform.position = new Vector2(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, -2.4f,2.4f),
+        transform.position = new Vector2(Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, -playerMouvment, playerMouvment),
         Mathf.Clamp(Camera.main.ScreenToWorldPoint(Input.mousePosition).y,-4.3f,0.5f));   
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Lawyers")
         {
-            score += 123;
+            score += scoreLawyer;
             Destroy(other.gameObject);
         
         } 

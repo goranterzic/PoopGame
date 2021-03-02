@@ -9,6 +9,11 @@ public class Bigboss : MonoBehaviour
     int    randomColor;
     float  randomDirection;
     float  randomSpeedDirection;
+    [SerializeField]
+    private float repeatTime, repeatRate, delTimePoopPrefab, randDirMin, randDirMax;
+    [SerializeField]
+    private int randomColorMin, randomColorMax, ranSpeedDirMin, ranSpeedDirMax;
+    // private float repeatRate;
 
     public GameObject Poop;
     GameObject PoopInstante;
@@ -17,7 +22,7 @@ public class Bigboss : MonoBehaviour
     #region Methods
     void Start()
     {
-        InvokeRepeating("ColorSet", 0.17f, 0.37f);   
+        InvokeRepeating("ColorSet",repeatTime,repeatRate /*0.17f, 0.37f*/);   
     }
     void FixedUpdate()
     {  
@@ -25,7 +30,7 @@ public class Bigboss : MonoBehaviour
     }
     void ColorSet()
     {
-        randomColor = Random.Range(1, 5);
+        randomColor = Random.Range(randomColorMin,randomColorMax /*1, 5*/);
         PoopInstante = Instantiate(Poop, new Vector3(transform.position.x, transform.position.y - 0.3f), Quaternion.identity);
         PoopInstante.name = "PoopInstance";
         SpeedSet(PoopInstante,ChangeDirection());
@@ -56,17 +61,17 @@ public class Bigboss : MonoBehaviour
                 Debug.Log("Greska iz nekog razloga. ");
                 break;
         }
-        Destroy(PoopInstante, 1f);
+        Destroy(PoopInstante, delTimePoopPrefab);
     }
     Vector2 SpeedSet(GameObject Poop, float randomSpeedDirection)
     {
       Vector2 PoopSpeed = Poop.GetComponent<Rigidbody>().velocity= new Vector2(0,-1  * randomSpeedDirection);
       return  PoopSpeed;
     }
-    float ChangeDirection() 
+    float ChangeDirection()
     {
-        randomSpeedDirection = Random.Range(4, 11);
-        randomDirection = Random.Range(0.2f, 1.58f);
+        randomSpeedDirection = Random.Range(ranSpeedDirMin, ranSpeedDirMax /*4, 11*/);
+        randomDirection = Random.Range(randDirMin, randDirMax/*0.2f, 1.58f*/);
         if (changeDirection)
         {
             transform.Translate(Vector2.right * Time.deltaTime * randomSpeedDirection);

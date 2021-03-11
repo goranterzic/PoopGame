@@ -31,7 +31,7 @@ public class Bigboss : MonoBehaviour
     void ColorSet()
     {
         randomColor = Random.Range(randomColorMin,randomColorMax /*1, 5*/);
-        PoopInstante = Instantiate(Poop, new Vector3(transform.position.x, transform.position.y - 0.3f), Quaternion.identity);
+        PoopInstante = Instantiate(Poop, new Vector2(transform.position.x, transform.position.y - 0.23f), Quaternion.identity);
         PoopInstante.name = "PoopInstance";
         SpeedSet(PoopInstante,ChangeDirection());
         Renderer PoopRenderer = PoopInstante.GetComponent<Renderer>();

@@ -31,9 +31,6 @@ public class Player : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-
-
-
         if (collision.gameObject.GetComponent<Renderer>().material.color.Equals(Color.white))
          {
              score -= scoreRed;
@@ -50,7 +47,7 @@ public class Player : MonoBehaviour
          {
              score -= scoreManRight;
          }
-        Destroy(collision.gameObject);
+       
     }
     void PlayerMouvment() 
     { 

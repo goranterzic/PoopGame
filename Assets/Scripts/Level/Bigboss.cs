@@ -20,14 +20,14 @@ public class Bigboss : MonoBehaviour
     [SerializeField] private int ranSpeedDirMin;
     [SerializeField] private int ranSpeedDirMax;
     
-    public GameObject Poop;
-    GameObject PoopInstante;
+   // public GameObject Poop;
+  //  GameObject PoopInstante;
     #endregion
 
     #region Methods
     void Start()
     {
-        InvokeRepeating("ColorSet",repeatTime,repeatRate /*0.17f, 0.37f*/);   
+       // InvokeRepeating("ColorSet",repeatTime,repeatRate /*0.17f, 0.37f*/);   
     }
     void FixedUpdate()
     {  

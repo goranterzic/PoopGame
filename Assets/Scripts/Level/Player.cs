@@ -57,12 +57,10 @@ public class Player : MonoBehaviour
          else if (collision.gameObject.name == "managerRight")
          {
              score -= scoreManRight;
-<<<<<<< Updated upstream
          }
         Destroy(collision.gameObject);
-=======
-         } 
->>>>>>> Stashed changes
+          
+
     }
     private void OnMouseDown()
     {

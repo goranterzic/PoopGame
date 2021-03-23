@@ -140,3 +140,21 @@ PolygonCollider2D:
       - {x: 0.114999995, y: -0.11}
       - {x: 0.114999995, y: 0.049999997}
       - {x: 0.095, y: 0.11}
+<<<<<<< Updated upstream
+=======
+--- !u!114 &-857949499810479849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7668621867735957032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b62e28dbcb9f94cb372963360224ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  moveSpeedMin: 3
+  moveSpeedMax: 7
+>>>>>>> Stashed changes

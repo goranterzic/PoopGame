@@ -5,46 +5,25 @@ using UnityEngine;
 public class FirstFloorMan : MonoBehaviour
 {
     # region Fields
+    [SerializeField]
     float randomDirectionRight;
+    [SerializeField]
     float randomDirectionLeft;
-
+    [SerializeField]
     float randomSpeedDirection;
     bool changeDirection = false;
-    [SerializeField] private float repeatTime;
-    [SerializeField] private float repeatRate;
-    [SerializeField] private float delTimePoopPrefab;
-    [SerializeField] private float randDirRight;
-    [SerializeField] private float randDirLeft;
-    
-   
- 
-   [SerializeField] private float ranSpeedDir;
-
-    public GameObject Poop;
-    GameObject PoopInstante;
+  
     #endregion
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         ChangeDirection();
     }
     float ChangeDirection()
-    {
+    {/*
         randomSpeedDirection = ranSpeedDir;
         randomDirectionRight = randDirRight;
         randomDirectionLeft = randDirLeft;
-        /*
-        dir = transform.position.x > randomDirection ? -1 : 1;
-        transform.Translate(new Vector2(dir, 0) * Time.deltaTime * randomSpeedDirection);
-        */
-
-
+     */ 
         if (changeDirection)
         {
             transform.Translate(Vector2.right * Time.deltaTime * randomSpeedDirection);
@@ -61,9 +40,10 @@ public class FirstFloorMan : MonoBehaviour
         {
             changeDirection = true;
         }
-
-
-
         return randomSpeedDirection;
+        /*
+       dir = transform.position.x > randomDirection ? -1 : 1;
+       transform.Translate(new Vector2(dir, 0) * Time.deltaTime * randomSpeedDirection);
+       */
     }
 }

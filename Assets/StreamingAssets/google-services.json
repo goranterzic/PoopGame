@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "32842409288",
+    "firebase_url": "https://poopgame-d6b46-default-rtdb.firebaseio.com",
+    "project_id": "poopgame-d6b46",
+    "storage_bucket": "poopgame-d6b46.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32842409288:android:bc0038cc7e5b81ef34ff7d",
+        "android_client_info": {
+          "package_name": "com.google.firebase.poopgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32842409288-6mbjc3g2k56kjhmj65b9vmn6fn9d72aa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.poopgame",
+            "certificate_hash": "625c6aa579e4ffc9f832e734ca887a44e3ecb166"
+          }
+        },
+        {
+          "client_id": "32842409288-rmplaa88v9c1oa3bclqlo5itn97au80b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFjtPpIX4a8JcLQkuk7SVQeJ1W5knHSKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32842409288-rmplaa88v9c1oa3bclqlo5itn97au80b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

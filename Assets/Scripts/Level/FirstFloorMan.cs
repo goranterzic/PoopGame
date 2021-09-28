@@ -5,6 +5,7 @@ using UnityEngine;
 public class FirstFloorMan : MonoBehaviour
 {
     # region Fields
+<<<<<<< Updated upstream
     float randomDirectionRight;
     float randomDirectionLeft;
 
@@ -22,28 +23,28 @@ public class FirstFloorMan : MonoBehaviour
 
     public GameObject Poop;
     GameObject PoopInstante;
+=======
+    [SerializeField]float randomSpeedDirection;
+    [SerializeField]float limit;
+    [SerializeField] Animator ManAnima;
+    bool changeDirection;
+    private bool startWalk;
+>>>>>>> Stashed changes
     #endregion
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        changeDirection = false;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        ChangeDirection();
+        if (startWalk)
+        {
+            ChangeDirection();
+        }
     }
-    float ChangeDirection()
+    void ChangeDirection()
     {
-        randomSpeedDirection = ranSpeedDir;
-        randomDirectionRight = randDirRight;
-        randomDirectionLeft = randDirLeft;
-        /*
-        dir = transform.position.x > randomDirection ? -1 : 1;
-        transform.Translate(new Vector2(dir, 0) * Time.deltaTime * randomSpeedDirection);
-        */
-
+        startWalk = true;
 
         if (changeDirection)
         {
@@ -53,17 +54,24 @@ public class FirstFloorMan : MonoBehaviour
         {
             transform.Translate(Vector2.left * Time.deltaTime * randomSpeedDirection);
         }
-        if (transform.position.x >= randomDirectionRight)
+        if (transform.position.x >=limit)
         {
+            startWalk = false;
+            ManAnima.SetBool("side", false);
             changeDirection = false;
+            
         }
-        if (transform.position.x <= randomDirectionLeft)
+        if (transform.position.x <= -limit)
         {
+            startWalk = false;
+            ManAnima.SetBool("side", true);
             changeDirection = true;
         }
+    }
+    void StopWalk() 
+    {
 
+        startWalk = false;
 
-
-        return randomSpeedDirection;
     }
 }

@@ -4,5 +4,33 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_Scenes: []
+=======
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 0aca54e1ff818434da0c5f33dcccb1b0
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: d9d7d8aa1b4880d409ca173ae020328d
+  - enabled: 1
+    path: Assets/Scenes/ResumeMenu.unity
+    guid: 54143b90c6bfafa41a0de7461118cba9
+  - enabled: 1
+    path: Assets/Scenes/Level.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Options.unity
+    guid: 5b90e38df1386ef409ca831c647b0ccd
+  - enabled: 1
+    path: Assets/Scenes/Score.unity
+    guid: d7c5386dbc64fe4458e6dad63b8511ad
+  - enabled: 1
+    path: Assets/Scenes/CREDITS.unity
+    guid: ee189f1697a919e4e87582a679391d8d
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 28cc58864c596404b907962ff0e563ff
+>>>>>>> Stashed changes
   m_configObjects: {}
